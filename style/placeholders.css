@@ -1,0 +1,43 @@
+input[type=password]::-webkit-input-placeholder
+{
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+input[type=password]::-moz-placeholder
+{
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+input[type=password]:-ms-input-placeholder
+{
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+input[type=password]::-ms-input-placeholder
+{
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+::-webkit-input-placeholder
+{
+  color: inherit;
+}
+
+::-moz-placeholder
+{
+  color: inherit;
+}
+
+:-ms-input-placeholder
+{
+  color: inherit;
+}
+
+::-ms-input-placeholder
+{
+  color: inherit;
+}

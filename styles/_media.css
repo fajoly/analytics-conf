@@ -1,0 +1,9 @@
+@custom-media --none not all;
+
+@custom-media --phone (width <= 320px);
+@custom-media --bigphone (width <= 500px);
+@custom-media --phablet (width <= 800px);
+@custom-media --tablet (width <= 1024px);
+@custom-media --laptop (width <= 1366px);
+@custom-media --desktop (width <= 1920px);
+@custom-media --widescreen (width > 1920px);
