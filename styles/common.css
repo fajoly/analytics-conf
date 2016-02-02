@@ -1,5 +1,12 @@
 @import "_colors.css";
 
+@font-face
+{
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+
 html
 {
   color: var(--main);
@@ -24,7 +31,6 @@ main {
 
 section {
   max-width: 1000px;
-  height: 100%;
 
   margin: 0 auto;
 
@@ -160,6 +166,14 @@ section {
   }
 
   &.analytics {
+    padding-bottom: 110px;
+
+    background: {
+      image: url('../images/analytics-shade.png');
+      repeat: no-repeat;
+      position: bottom 0 center;
+    };
+
     h2 {
       margin-top: 10px;
     }
