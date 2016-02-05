@@ -35,6 +35,10 @@ section h2 {
   color: #ca0303;
 }
 
+section li {
+  display: inline-block;
+}
+
 section.top {
   min-height: 700px;
   background-image: url('../images/pointer.png');
@@ -55,7 +59,6 @@ section.top nav {
 }
 
 section.top nav ul li {
-  display: inline-block;
   margin-right: 10px;
   font: inherit;
   font-weight: 300;
@@ -89,10 +92,6 @@ section.top .info address {
 
 section.top .info address time {
   display: block;
-}
-
-section.top .info li {
-  display: inline-block;
 }
 
 section.top .info li:last-child {
@@ -175,7 +174,6 @@ section.analytics ul {
 section.analytics ul li {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  display: inline-block;
   width: 33.33%;
   padding: 0 20px;
   vertical-align: top;
@@ -193,4 +191,269 @@ section.analytics ul li h3 {
 section.analytics ul li p {
   text-align: left;
   font-size: 18px;
+}
+
+section.agenda {
+  padding-bottom: 50px;
+  background-image: url('../images/agenda-shade.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+section.agenda h2 {
+  margin-top: 70px;
+}
+
+section.agenda .plan {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+
+section.agenda .plan .speakers {
+  width: 40%;
+  margin-top: 50px;
+  text-align: right;
+}
+
+section.agenda .plan .speakers > li {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-bottom: 8px;
+  border: 1px solid #d7d7d7;
+  color: #4a5567;
+}
+
+section.agenda .plan .speakers > li:first-child {
+  border: none;
+  padding-right: 125px;
+  padding-bottom: 0;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #000;
+}
+
+section.agenda .plan .speakers > li:first-child::before,
+            section.agenda .plan .speakers > li:first-child::after {
+  all: unset;
+}
+
+section.agenda .plan .speakers > li:first-child p {
+  width: 100%;
+}
+
+section.agenda .plan .speakers > li.offset {
+  margin-top: 155px;
+}
+
+section.agenda .plan .speakers > li .speaker {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+}
+
+section.agenda .plan .speakers > li .speaker p {
+  display: inline-block;
+  max-width: 225px;
+}
+
+section.agenda .plan .speakers > li .speaker .name {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ca0303;
+}
+
+section.agenda .plan .speakers > li .speaker img {
+  margin-left: 20px;
+  border: 1px solid #d7d7d7;
+  border-radius: 50%;
+}
+
+section.agenda .plan .speakers > li .contacts {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  width: 100%;
+  padding-right: 130px;
+  text-align: right;
+}
+
+section.agenda .plan .speakers > li .contacts li {
+  margin-right: 5px;
+}
+
+section.agenda .plan .speakers > li .contacts li:last-child {
+  margin-right: 0;
+}
+
+section.agenda .plan .speakers > li .contacts a {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background-image: url('/images/icons/social.svg');
+  background-repeat: no-repeat;
+  background-size: 80px;
+}
+
+section.agenda .plan .speakers > li .contacts a.in {
+  background-position: -56px -30px;
+}
+
+section.agenda .plan .speakers > li .contacts a.in:hover {
+  background-position: -56px -2px;
+}
+
+section.agenda .plan .speakers > li .contacts a.fb {
+  background-position: -1px -30px;
+}
+
+section.agenda .plan .speakers > li .contacts a.fb:hover {
+  background-position: -1px -2px;
+}
+
+section.agenda .plan .speakers > li .contacts a.twi {
+  background-position: -28px -30px;
+}
+
+section.agenda .plan .speakers > li .contacts a.twi:hover {
+  background-position: -28px -2px;
+}
+
+section.agenda .plan .speakers > li::before,
+          section.agenda .plan .speakers > li::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 100%;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  background-color: transparent;
+  border-style: solid;
+}
+
+section.agenda .plan .speakers > li::before {
+  position: absolute;
+  border-width: 16px 0 16px 20px;
+  border-color: transparent transparent transparent white;
+  z-index: 1;
+}
+
+section.agenda .plan .speakers > li::after {
+  position: absolute;
+  border-width: 17px 0 17px 22px;
+  border-color: transparent transparent transparent #d7d7d7;
+}
+
+section.agenda .plan .speakers:last-child {
+  text-align: left;
+}
+
+section.agenda .plan .speakers:last-child > li:first-child {
+  padding-right: 0;
+  padding-left: 125px;
+}
+
+section.agenda .plan .speakers:last-child > li .speaker {
+  -webkit-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+  text-align: left;
+}
+
+section.agenda .plan .speakers:last-child > li .speaker img {
+  margin: 0;
+  margin-right: 20px;
+}
+
+section.agenda .plan .speakers:last-child > li .speaker:first-child p {
+  text-align: left;
+}
+
+section.agenda .plan .speakers:last-child > li .contacts {
+  padding: 0;
+  padding-left: 130px;
+  text-align: left;
+}
+
+section.agenda .plan .speakers:last-child > li::before,
+            section.agenda .plan .speakers:last-child > li::after {
+  left: auto;
+  left: initial;
+  right: 100%;
+}
+
+section.agenda .plan .speakers:last-child > li::before {
+  position: absolute;
+  border-width: 16px 20px 16px 0;
+  border-color: transparent white transparent transparent;
+  z-index: 1;
+}
+
+section.agenda .plan .speakers:last-child > li::after {
+  position: absolute;
+  border-width: 17px 22px 17px 0;
+  border-color: transparent #d7d7d7 transparent transparent;
+}
+
+section.agenda .plan .schedule {
+  position: relative;
+  margin-top: 80px;
+}
+
+section.agenda .plan .schedule li {
+  display: block;
+}
+
+section.agenda .plan .schedule li:last-child time.wide {
+  margin-bottom: 0;
+}
+
+section.agenda .plan .schedule li time {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  margin-bottom: 117px;
+  border: 1px solid #716f6f;
+  border-radius: 50%;
+  background-color: #fff;
+  line-height: 55px;
+}
+
+section.agenda .plan .schedule li time.wide {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+  padding: 8px 0;
+  border-radius: 5px;
+  line-height: 1;
+  margin-bottom: 85px;
+}
+
+section.agenda .plan .schedule::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: -1;
+  background-color: #716f6f;
 }
