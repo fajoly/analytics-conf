@@ -8,10 +8,14 @@
 <link rel="stylesheet" href="style/reset.css">
 <link rel="stylesheet" href="style/common.css">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
+<script src="/scripts/map.js" defer></script>
+<script src="/scripts/nodes.js" defer></script>
+
 <main>
   <section class="top" id="top">
     <nav>
-      <a href="/" class="logo">
+      <a href="/" class="logo" title="На главную">
         <img src="/images/logo.png" alt="Hackraft Logo">
       </a>
       <ul>
@@ -374,23 +378,130 @@
   </section>
 
   <section class="tickets" id="tickets">
-    <h2>Почему важна бизнес-аналитика и как её прожевать</h2>
+    <h3>Купить билеты</h3>
 
-    <ul>
+    <ul class="offers">
       <li>
-        <img src="/images/icons/abak.png" alt="">
-        <h3>Анализ эффективностей маркетинговых кампаний</h3>
-        <p>Поскольку ставить вместо текста  заглушку Лорем Ипсум считается моветоном, я попытаюсь написать что-то своими словами. Все, что я знаю о конференции - это слово "аналитика". Итак, развивающиеся компании при проведении маркетинговых акций всегда сталкиваются с потребностью анализа эффективности мероприятий.</p>
+        <p>Предварительный заказ
+           <br>
+           <small>до 1 марта</small>
+        </p>
+        <p class="price">
+            900<span> грн</span>
+            <br>
+            <a href="#" target="_blank" title="Заказать билет" class="action">Заказать</a>
+        </p>
       <li>
-        <img src="/images/icons/calc.png" alt="">
-        <h3>Обмен ценным опытом между развивающимися организациями</h3>
-        <p>Не менее важной проблемой развития бизнеса оказывается отсутствие прощадки для обмена опытом между компаниями - наверное, на конференциях люди прежде всего обмениваются опытом, и важно акцентировать на этом внимание потенциальных слушателей.</p>
+        <p>Покупка билетов
+           <br>
+           <small>до 9 марта</small>
+        </p>
+        <p class="price">
+            1000<span> грн</span>
+            <br>
+            <a href="#" target="_blank" title="Заказать билет" class="action">Заказать</a>
+        </p>
       <li>
-        <img src="/images/icons/graph.png" alt="">
-        <h3>Оставаться в тренде - жизненно необходимо</h3>
-        <p>Конференция - это всегда лучший способ понять, что же сейчас является актуальным в развитии бизнеса, а какие приемы отходят в прошлое. Только следуя последним "веяниям моды" компании могут называть себя лидерами отрасли. Тренды же часто задаются потребительскими потребностями - их жизненно важно не упустить.</p>
+        <p>Последние продажи
+           <br>
+           <small>до 19 марта</small>
+        </p>
+        <p class="price">
+            1200<span> грн</span>
+            <br>
+            <a href="#" target="_blank" title="Заказать билет" class="action">Заказать</a>
+        </p>
     </ul>
   </section>
+
+  <section class="gift" id="gift">
+    <div>
+      <p>Только до 1 марта!</p>
+      <p>
+        При предварительном
+        <br>заказе билетов
+        <br>получите подарок
+      </p>
+
+      <a href="#" title="Получить подарок" class="action">Получить подарок</a>
+    </div>
+  </section>
+
+  <section class="sponsors" id="sponsors">
+    <h3>Спонсоры конференции</h3>
+    <ul class="general-sponsors">
+      <li>
+
+      <li>
+
+      <li>
+
+    </ul>
+    <ul class="sponsors">
+      <li>
+
+      <li>
+
+      <li>
+
+      <li>
+
+      <li>
+
+      <li>
+
+      <li>
+
+      <li>
+
+      <li>
+
+      <li>
+
+
+
+    </ul>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <h3>Контактная информация</h3>
+    <form action="" id="contact">
+      <p>Связаться с нами</p>
+      <label for="name">Ваше имя
+        <input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+      </label>
+      <label for="email">Ваша электронная почта
+        <input type="email" name="email" id="email" placeholder="Введите ваш email" required>
+      </label>
+      <label for="message">Ваше сообщение
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      </label>
+      <input type="submit" value="Отправить">
+    </form>
+    <div class='square-box'>
+      <div class='square-content'><div id="map"></div></div>
+    </div>
+  </section>
+
 </main>
+
+<footer>
+      <p class="copyright">
+        <a href="/" class="logo" title="На главную">
+          <img src="/images/logo.png" alt="Hackraft Logo">
+        </a>
+        Copyright &copy; 2015 HACKRAFT.
+        <br>
+        All rights reserved.
+      </p>
+
+      <p class="emails">
+        <a href="mailto:email@email.com">email@email.com</a>
+
+        <a href="mailto:email@email.com">email@email.com</a>
+      </p>
+  </footer>
+
+  <canvas id="nodes"></canvas>
 
 </html>
