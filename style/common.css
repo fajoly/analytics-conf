@@ -651,6 +651,12 @@ section.contacts form input[type=submit] {
   color: #fff;
 }
 
+section.contacts form input[type=submit].action:hover {
+  background-color: #fff;
+  color: #ca0303;
+  border-color: currentColor;
+}
+
 section.contacts form label {
   font-size: 14px;
 }
@@ -708,7 +714,7 @@ footer p.emails a {
 }
 
 
-a.action {
+.action {
   display: inline-block;
 
   color: #fff;
@@ -719,6 +725,15 @@ a.action {
   font-family: "LatoLight";
 
   cursor: pointer;
+  -webkit-transition: background-color 500ms, color 500ms;
+  transition: background-color 500ms, color 500ms;;
+}
+
+
+.action:hover {
+  background-color: #fff;
+  color: #ca0303;
+  border-color: currentColor;
 }
 
 .square-box{

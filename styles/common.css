@@ -678,6 +678,12 @@ section {
         width: 50%;
         background-color: var(--accent);
         color: #fff;
+
+        &.action:hover {
+          background-color: #fff;
+          color: var(--accent);
+          border-color: currentColor;
+        };
       }
 
       label {
@@ -739,7 +745,7 @@ footer {
 }
 
 
-a.action {
+.action {
   display: inline-block;
 
   color: #fff;
@@ -750,6 +756,13 @@ a.action {
   font-family: "LatoLight";
 
   cursor: pointer;
+  transition: background-color 500ms, color 500ms;
+
+  &:hover {
+    background-color: #fff;
+    color: var(--accent);
+    border-color: currentColor;
+  };
 }
 
 .square-box{
