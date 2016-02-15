@@ -145,7 +145,7 @@ section.top .info .social a {
   display: inline-block;
   width: 32px;
   height: 32px;
-  background-image: url('/images/icons/social.png');
+  background-image: url('images/icons/social.png');
   background-repeat: no-repeat;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -537,7 +537,7 @@ section.gift {
   border: 1px solid #d7d7d7;
   background-size: cover;
   /*background-position: top 0px right;*/
-  background-image: url('/images/offer-bg.jpg');
+  background-image: url('images/offer-bg.jpg');
   background-repeat: no-repeat;
 }
 

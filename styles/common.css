@@ -156,7 +156,7 @@ section {
           width: 32px;
           height: 32px;
           background: {
-            image: url('/images/icons/social.png');
+            image: url('images/icons/social.png');
             repeat: no-repeat;
           };
           filter: grayscale(100%);
@@ -555,7 +555,7 @@ section {
     border: 1px solid var(--light-border);
     background-size: cover;
     /*background-position: top 0px right;*/
-    background-image: url('/images/offer-bg.jpg');
+    background-image: url('images/offer-bg.jpg');
     background-repeat: no-repeat;
 
     div {
