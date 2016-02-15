@@ -24,10 +24,62 @@ html, body {
 
 main {
   /*height: 100%;*/
-  background-image: url('../images/background.jpg');
   background-position: top 100px left;
   background-repeat: no-repeat;
   background-size: 100% auto;
+
+}
+
+main > nav {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 -webkit-calc(55% - 500px);
+  padding: 0 calc(55% - 500px);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 100px;
+  background: #fff;
+  z-index: 2;
+}
+
+main > nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font: inherit;
+  font-weight: 300;
+  color: #716f6f;
+}
+
+main > nav ul li:last-child {
+  margin-right: 0;
+}
+
+main > nav ul li:hover {
+  color: #ca0303;
+}
+
+.blur {
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  top: 0;
+  background-image: url('../images/rounded-place.png');
+  background-repeat: no-repeat;
+  background-position: bottom 100px left;
+  background-size: 100% 40%;
+  pointer-events: none;
 }
 
 section {
@@ -52,43 +104,22 @@ section.top {
   background-size: 100%;
 }
 
-section.top nav {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
-  -webkit-align-items: center;
-          align-items: center;
-  height: 100px;
-  padding: 0 10px;
-}
-
-section.top nav ul li {
-  margin-right: 10px;
-  font: inherit;
-  font-weight: 300;
-  color: #716f6f;
-}
-
-section.top nav ul li:last-child {
-  margin-right: 0;
-}
-
-section.top nav ul li:hover {
-  color: #ca0303;
-}
-
 section.top .info {
-  margin-top: 155px;
+  padding-top: 255px;
+  position: relative;
 }
 
 section.top .info h1 {
+  position: relative;
+  z-index: 2;
   margin-bottom: 40px;
   font-size: 2em;
   color: #ca0303;
 }
 
 section.top .info address {
+  position: relative;
+  z-index: 2;
   margin-bottom: 45px;
   color: inherit;
   font: inherit;
@@ -96,7 +127,12 @@ section.top .info address {
 }
 
 section.top .info address time {
-  display: block;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.53333);
+}
+
+section.top .info li {
+  position: relative;
 }
 
 section.top .info li:last-child {
@@ -112,6 +148,7 @@ section.top .info .links {
 }
 
 section.top .info .links li {
+  z-index: 2;
   width: 190px;
   margin-right: 20px;
   margin-bottom: 10px;
@@ -130,6 +167,7 @@ section.top .info .links li a {
 }
 
 section.top .info .social li {
+  z-index: 2;
   margin-right: 20px;
 }
 
@@ -147,6 +185,7 @@ section.top .info .social a {
   height: 32px;
   background-image: url('../images/icons/social.png');
   background-repeat: no-repeat;
+  background-color: #fff;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: -webkit-filter 500ms;
@@ -442,7 +481,7 @@ section.agenda .plan .schedule li time {
   width: 55px;
   height: 55px;
   margin-bottom: 120px;
-  border: 1px solid #716f6f;
+  border: 1px solid #d7d7d7;
   border-radius: 50%;
   background-color: #fff;
   line-height: 55px;
@@ -469,7 +508,7 @@ section.agenda .plan .schedule::after {
   left: 50%;
   top: 0;
   z-index: -1;
-  background-color: #716f6f;
+  background-color: #d7d7d7;
 }
 
 section.tickets h3 {
@@ -638,6 +677,7 @@ section.contacts form input, section.contacts form textarea {
        box-sizing: border-box;
   width: 100%;
   padding: 5px 10px;
+  margin-top: 5px;
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid #d7d7d7;
@@ -659,6 +699,7 @@ section.contacts form input[type=submit].action:hover {
 
 section.contacts form label {
   font-size: 14px;
+  color: rgba(0, 0, 0, 0.66667);
 }
 
 section.contacts form textarea {
@@ -771,10 +812,11 @@ footer p.emails a {
 }
 
 /* Nodes*/
-canvas {
-  height:100vh;
-  position: fixed;
+.canvas-wrapper canvas {
+  max-height: 80vh;
+  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none;
+  z-index: 1;
 }

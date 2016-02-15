@@ -27,11 +27,63 @@ html, body {
 main {
   /*height: 100%;*/
   background: {
-    image: url('../images/background.jpg');
+    /*image: url('../images/background.jpg');*/
     position: top 100px left;
     repeat: no-repeat;
     size: 100% auto;
   };
+
+  > nav {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 calc(55% - 500px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100px;
+    background: #fff;
+    z-index: 2;
+
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        font: inherit;
+        font-weight: 300;
+        color: var(--light-text);
+
+        &:last-child {
+          margin-right: 0;
+        };
+
+        &:hover {
+          color: var(--accent);
+        };
+      }
+    }
+  }
+
+}
+
+.blur {
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  top: 0;
+  background: {
+      image: url('../images/rounded-place.png');
+      repeat: no-repeat;
+      position: bottom 100px left;
+      size: 100% 40%;
+    }
+  pointer-events: none;
 }
 
 section {
@@ -57,53 +109,35 @@ section {
       size: 100%;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      height: 100px;
-      padding: 0 10px;
-
-      ul {
-        li {
-          margin-right: 10px;
-          font: inherit;
-          font-weight: 300;
-          color: var(--light-text);
-
-          &:last-child {
-            margin-right: 0;
-          };
-
-          &:hover {
-            color: var(--accent);
-          };
-        }
-      }
-    }
 
     .info {
-      margin-top: 155px;
+      padding-top: 255px;
+      position: relative;
 
       h1 {
+        position: relative;
+        z-index: 2;
         margin-bottom: 40px;
         font-size: 2em;
         color: var(--accent);
       }
 
       address {
+        position: relative;
+        z-index: 2;
         margin-bottom: 45px;
         color: inherit;
         font: inherit;
         font-size: 30px;
 
         time {
-          display: block;
+          display: inline-block;
+          background-color: #fff8;
         }
       }
 
       li {
+        position: relative;
 
         &:last-child {
           margin-right: 0;
@@ -118,6 +152,7 @@ section {
         margin-bottom: 40px;
 
         li {
+          z-index: 2;
           width: 190px;
           margin-right: 20px;
           margin-bottom: 10px;
@@ -141,6 +176,7 @@ section {
 
       .social {
         li {
+          z-index: 2;
           margin-right: 20px;
 
           &:nth-child(2) a {
@@ -158,6 +194,7 @@ section {
           background: {
             image: url('../images/icons/social.png');
             repeat: no-repeat;
+            color: #fff;
           };
           filter: grayscale(100%);
           transition: filter 500ms;
@@ -451,7 +488,7 @@ section {
             height: 55px;
             margin-bottom: 120px;
 
-            border: 1px solid var(--light-text);
+            border: 1px solid var(--light-border);
             border-radius: 50%;
 
             background-color: #fff;
@@ -483,7 +520,7 @@ section {
           top: 0;
           z-index: -1;
 
-          background-color: var(--light-text);
+          background-color: var(--light-border);
         };
       }
     }
@@ -666,6 +703,7 @@ section {
         box-sizing: border-box;
         width: 100%;
         padding: 5px 10px;
+        margin-top: 5px;
         margin-bottom: 20px;
         border-radius: 5px;
         border: 1px solid var(--light-border);
@@ -688,6 +726,7 @@ section {
 
       label {
         font-size: 14px;
+        color: #000a;
       }
 
       textarea {
@@ -800,10 +839,11 @@ footer {
 }
 
 /* Nodes*/
-canvas {
-  height:100vh;
-  position: fixed;
+.canvas-wrapper canvas {
+  max-height: 80vh;
+  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none;
+  z-index: 1;
 }

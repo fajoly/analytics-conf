@@ -10,10 +10,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" defer></script>
 <script src="scripts/map.js" defer></script>
-<script src="scripts/nodes.js" defer></script>
+<script src="scripts/particles.js" defer></script>
 
 <main>
-  <section class="top" id="top">
     <nav>
       <a href="/" class="logo" title="На главную">
         <img src="images/logo.png" alt="Hackraft Logo">
@@ -33,10 +32,14 @@
           <a href="#">Контакты</a>
       </ul>
     </nav>
+  <section class="top" id="top">
+    <div id="particles-fullwin-wrapper" class="canvas-wrapper">
+    </div>
+
     <div class="info">
       <h1>Analytic Conference</h1>
       <address>
-        <time datetime="">To be announced</time>
+        <time datetime="">To be announced</time><br>
         Кинотеатр "Украина"
       </address>
       <ul class="links">
@@ -468,10 +471,10 @@
     <form action="" id="contact">
       <p>Связаться с нами</p>
       <label for="name">Ваше имя
-        <input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+        <input type="text" name="name" id="name" required>
       </label>
       <label for="email">Ваша электронная почта
-        <input type="email" name="email" id="email" placeholder="Введите ваш email" required>
+        <input type="email" name="email" id="email" required>
       </label>
       <label for="message">Ваше сообщение
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
@@ -483,25 +486,25 @@
     </div>
   </section>
 
+  <footer>
+    <p class="copyright">
+      <a href="/" class="logo" title="На главную">
+        <img src="images/logo.png" alt="Hackraft Logo">
+      </a>
+      Copyright &copy; 2015 HACKRAFT.
+      <br>
+      All rights reserved.
+    </p>
+
+    <p class="emails">
+      <a href="mailto:email@email.com">email@email.com</a>
+
+      <a href="mailto:email@email.com">email@email.com</a>
+    </p>
+  </footer>
+  <div class="blur"></div>
 </main>
 
-<footer>
-      <p class="copyright">
-        <a href="/" class="logo" title="На главную">
-          <img src="images/logo.png" alt="Hackraft Logo">
-        </a>
-        Copyright &copy; 2015 HACKRAFT.
-        <br>
-        All rights reserved.
-      </p>
 
-      <p class="emails">
-        <a href="mailto:email@email.com">email@email.com</a>
-
-        <a href="mailto:email@email.com">email@email.com</a>
-      </p>
-  </footer>
-
-  <canvas id="nodes"></canvas>
 
 </html>
