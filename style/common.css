@@ -131,15 +131,15 @@ section.top .info address time {
   background-color: rgba(255, 255, 255, 0.53333);
 }
 
-section.top .info li {
+section.top .info .social li, section.top .info .links li {
   position: relative;
 }
 
-section.top .info li:last-child {
+section.top .info .social li:last-child, section.top .info .links li:last-child {
   margin-right: 0;
 }
 
-section.top .info li a {
+section.top .info .social li a, section.top .info .links li a {
   display: block;
 }
 

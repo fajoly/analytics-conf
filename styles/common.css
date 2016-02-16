@@ -97,6 +97,8 @@ section {
 
   li {
     display: inline-block;
+
+
   }
 
   &.top {
@@ -136,7 +138,7 @@ section {
         }
       }
 
-      li {
+      .social li, .links li {
         position: relative;
 
         &:last-child {
